@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "predictors_backend": {
+      "candid": "src/predictors_backend/predictors_backend.did",
+      "package": "predictors_backend",
+      "type": "rust"
+    },
+    "predictors_frontend": {
+      "dependencies": [
+        "predictors_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/predictors_frontend/src/index.html"
+      },
+      "source": [
+        "src/predictors_frontend/assets",
+        "dist/predictors_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
